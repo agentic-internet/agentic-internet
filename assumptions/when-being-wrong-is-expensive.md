@@ -46,6 +46,36 @@ That inverts the usual worry. The question stops being "is the matching good eno
 with money" and becomes "does the design still hold when the matching is wrong." For anything
 consequential, it has to.
 
+## What the terms have to be bound to
+
+This part came out of a discussion on r/AI_Agents, from someone who'd built the boundary-handling
+side for real, and it's sharper than what I had.
+
+Their setup already resolves some cross-boundary requests without a human: known-safe calls get
+auto-approved against a policy, a coordinator answers purely informational asks. What stays human
+is anything irreversible or ambiguous — spending money, touching production, a decision the rules
+couldn't make. So the real split isn't human-versus-agent. It's **reversible-versus-not, plus
+whether the thing resolving the request can be held to a policy.**
+
+Which lands on the terms block from a direction I hadn't taken it: a published description isn't
+only "what I can do." It's "the ruleset my automatic answers are bound to." And — the line I keep
+coming back to — *a policy you can't audit isn't a policy.* So for the other side to trust an
+organization's auto-answers, the terms can't just be asserted; they have to be **signed against a
+published ruleset the other side can check.** Then trust can be graduated by exactly the axis
+above:
+
+- **informational** — resolve freely, nothing at stake;
+- **reversible** — resolve against the signed policy;
+- **irreversible / money / production** — stays gated, or human.
+
+That's a cleaner trust story than anything I'd written, and it barely adds machinery: the terms
+block already exists, and it's roughly one signature away from being auditable.
+
+The edge it doesn't close, and I want to keep it visible: signing makes a policy *checkable*, but
+who audits it, and what's the recourse when a signed policy is violated? That's the point where
+this either stays lightweight or turns into a heavier federation-style trust system — which is the
+other thing people reach for here, and a real open question rather than a settled one.
+
 ## Restating before acting
 
 The other half is that a system should say what it's about to do before doing it — but using the

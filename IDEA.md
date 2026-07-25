@@ -402,6 +402,15 @@ obligation is involved. Either way, I don't think the answer is a heavyweight pr
 up front. I think it's: describe capabilities well, let capable agents talk, and find out where
 that breaks.
 
+There's a useful clue in what people building internal agents already do at the boundary. A good
+pattern is that when an agent hits something outside its lane, it doesn't improvise around it — it
+emits a *typed request* (needs approval, missing credential, ambiguous decision) that today lands
+on a human. That typed request is already the opening move of a negotiation; the only thing this
+idea changes is that some of those requests could be answered by the other side's agent rather
+than a person, for the subset that side chose to expose and can be held to. Which is why the
+[terms block and what it's bound to](assumptions/when-being-wrong-is-expensive.md) matters more
+than the conversation layer on top of it.
+
 ## What kind of thing this even is
 
 If any of this turned into something, I don't think it would be software.
