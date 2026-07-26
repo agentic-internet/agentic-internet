@@ -26,6 +26,9 @@ doesn't hold up.
 - [when-being-wrong-is-expensive.md](when-being-wrong-is-expensive.md) — what happens to all of
   this when a mistake costs money. The most unresolved thing here, and the one I'd most like
   argued with.
+- [how-an-agent-decides-to-reach-out.md](how-an-agent-decides-to-reach-out.md) — how an agent works
+  out a task isn't its own to do, and what keeps it from calling out everywhere once it can. The
+  caller's side of the boundary, kept private and per-company on purpose.
 - [generate-your-own.md](generate-your-own.md) — a prompt you can paste into any AI to produce
   one of these for your own organization. Takes a minute.
 

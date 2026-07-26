@@ -2,4 +2,7 @@
 idea.txt
 chatgpt.txt
 notes-private/
-*.private.md
+*.private.*
+
+# local session aid — points to private notes
+CLAUDE.md

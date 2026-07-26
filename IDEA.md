@@ -411,6 +411,49 @@ than a person, for the subset that side chose to expose and can be held to. Whic
 [terms block and what it's bound to](assumptions/when-being-wrong-is-expensive.md) matters more
 than the conversation layer on top of it.
 
+## Deciding to reach out at all
+
+Everything above starts after the interesting moment has already passed — the agent has somehow
+decided this is a job for someone else and gone looking. But that decision is the part I skipped, and
+when I built a small version of this I caught myself cheating: I'd told the agent, in the prompt,
+"this isn't yours to do." That's not the agent reasoning. That's me writing the answer down.
+
+So two questions I'd been stepping over. How does an agent work out it needs to leave the building at
+all? And once it can — what stops it reaching *everywhere*?
+
+The first is the mirror image of the matching that runs everywhere else in this idea. An agent
+already has a set of things it can do in-house — its own tools, its own systems. The honest test for
+"is this external" is just whether any of that fits what's being asked. If nothing internal matches,
+that's the signal — not a rule someone wrote, but the same meaning-matching pointed inward. The
+recognition falls out of the agent not finding itself capable, which is a more honest place for it to
+come from than a sentence in a prompt.
+
+The second question is the one that actually worries me. An agent that can call any address on the
+Internet the moment it decides to is not something a company deploys. Reaching outward can't be a raw
+ability; it has to be a permitted one. But — and this is the part I want to get right — the thing
+that grants the permission is not new, and it is not a registry. Every company already keeps the
+list: who it does business with, and what it lets happen without a person signing off. Approved
+suppliers, spending limits, the vendors procurement has cleared. What I'm describing is that list
+made readable by the agent, and little more.
+
+So the shape is: the agent decides it needs help and asks its *own* side a narrow question — for
+this, am I allowed to act, and with whom? The answer is one of two things. Either "yes, and it's this
+organization," at which point it has a domain and everything above takes over — the ordinary read of
+`/.well-known` and the terms. Or "no" — and the point is that "no" isn't a failure. It's the typed
+request to a human from the previous section, arriving one step earlier: *I'd have to reach outside
+for this, and I'm not cleared to.* The same boundary, in a slightly earlier place.
+
+Two things I want to be careful not to oversell. It's deliberately the *caller's* side — it says how
+an agent decides to leave and stays in its lane, and nothing about whether the other end should
+believe the agent when it arrives. That's the harder, unsolved half I set out under identity and
+trust, and I haven't moved it. And it stays private, one per company, on purpose: the moment this
+becomes a shared directory of who-may-talk-to-whom, it's the central authority the whole idea is
+trying not to need. Whether a *public* version is ever worth building — some way to vouch that a
+stranger's published agent is really them — is a real question, but it re-centralises exactly what
+the rest avoids, so I'm keeping it well away from the core and out of this. The worked-out shape,
+including the part that keeps an agent from calling out on its own, is in
+[assumptions/how-an-agent-decides-to-reach-out.md](assumptions/how-an-agent-decides-to-reach-out.md).
+
 ## What kind of thing this even is
 
 If any of this turned into something, I don't think it would be software.
