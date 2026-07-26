@@ -226,6 +226,19 @@ technical either.
 I don't have answers to either. I mention them because a description of what an organization can
 do is useless — worse than useless — if nobody can tell whether to believe it.
 
+One shape I've only played with, for the second direction — why the organization should believe
+you. The provider issues the consumer a credential, roughly the way an API key works today: a
+certificate handed out when the relationship starts, which the calling agent presents when it acts.
+The receiving side is then checking *its own* credential, not trusting a stranger — it's the machine
+form of a contract two companies already have. Apple's push notification service is the intuition I
+keep reaching for: one issuer vouching reliably across an enormous number of relationships, except
+here each provider is the issuer for its own partners rather than one company for everyone. I like
+that it needs no central authority and reuses a relationship that already exists. What it very
+deliberately does *not* touch is two parties with no prior relationship at all — that's the hard
+part, and it's the kind of thing that would need a vouching layer more like a certificate authority,
+which re-centralises exactly what the rest of this avoids. So I'm keeping that aside on purpose.
+This is a direction to think about, not an answer I'm putting forward.
+
 ## There is no registry in this
 
 Worth being blunt about, because this is where ideas like this usually go wrong and where mine
@@ -489,3 +502,14 @@ I ask them."
 - Indexing turns out to be useless without cooperation — that whatever can be worked out from the
   outside is too thin or too wrong to act on. This is the part the prompt in
   [assumptions/](assumptions/) is meant to test, and it's cheap to find out.
+
+On that first one — the strongest objection, that AI just gets good enough at human interfaces that
+none of this is needed — a reader pushed back in a way I think is partly right. If agents become the
+traffic that matters, sites will adapt to *them*, the way they once adapted to search engines and
+then to mobile. That turns the objection into an adoption path rather than a dead end. The catch is
+that "adapt to agents" can mean two different things: publish what you can do, or just make the human
+page easier for software to drive. The second is cheaper, and cheaper usually wins, and it isn't this
+idea. What pulls specifically toward *publishing* is the one thing a page can't carry no matter how
+clean its markup: whether an act costs money, can be undone, needs a person to approve it. So the
+pressure, if it comes, rescues the terms before it rescues anything else — which is the same
+conclusion I keep arriving at from every other direction.
